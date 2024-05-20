@@ -22,6 +22,25 @@ The program also supports multiple users, requiring each to sign in with a case-
 10. Allows clearing history permanently
 11. Features data validation with friendly error messages as well as password encryption (hashing).
 
+### Project Images
+#### Login Page
+![Login Page Image](https://github.com/Flamingsides/TASKIT-A-Minimalistic-Task-Managing-Website/assets/84507406/e4fabbca-aafd-449c-aca6-10c0360ec96a)
+
+#### Tasks Dashboard
+![Tasks Dashboard](https://github.com/Flamingsides/TASKIT-A-Minimalistic-Task-Managing-Website/assets/84507406/05f6fefe-468a-4279-8160-f128df5e0cb6)
+
+#### Adding/Editing Tasks
+![Adding/Editing Tasks](https://github.com/Flamingsides/TASKIT-A-Minimalistic-Task-Managing-Website/assets/84507406/a457dec6-3d23-4a8a-818a-f0ebfe87ea9e)
+
+####  Tasks History Tab
+![Task History Tab](https://github.com/Flamingsides/TASKIT-A-Minimalistic-Task-Managing-Website/assets/84507406/f3299727-ee30-4e46-9a32-a743b14d09c9)
+
+<style>
+img {
+    width: 50%;
+}
+</style>
+
 ### Technologies Used
 #### Frontend
 1. HTML
