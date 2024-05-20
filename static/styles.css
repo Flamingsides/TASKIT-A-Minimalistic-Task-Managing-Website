@@ -1,0 +1,48 @@
+body {
+    background-image: url("./imgs/background.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale background image properly */
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+}
+
+.main {
+    text-align: center;
+    box-shadow: 0 1px 2px grey;
+    
+    /* Center div */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Round corners*/
+    border-radius: 8px;
+
+    /* Dimensions */
+    height: 80%;
+    width: 90%;
+    /* max-width: 90%; */
+
+    margin-top: 3%;
+    padding: 2%;
+
+    background-color: white;
+    overflow: auto;
+}
+
+.options-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.show-history-type {
+    display: flex;
+    align-items: center;
+}

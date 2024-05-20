@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tasks
+{% endblock %}
+
+{% block main %}
+    <table class="table table-responsive table-hover" style="width: 100%;">
+        <thead>
+            <th>Title</th>
+            <th colspan="5">Description</th>
+            <th>Priority</th>
+            <th style="width: 20%">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="/newtask" type="button" class="btn btn-outline-dark">New Task</a>
+                </div>
+            </th>
+        </thead>
+        <tbody>
+            {% if cur_tasks %}
+                {% for task in cur_tasks %}
+                    <tr>
+                        <td>{{ task.title }}</td>
+                        <td colspan="5">{{ task.description }}</td>
+                        <td>{{ task.priority }}</td>
+                        <td>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a class="btn btn-outline-dark" href="/edit?id={{ task.id }}" role="button">Edit</a>
+                                <a class="btn btn-outline-dark" href="/delete?id={{ task.id }}" role="button">Delete</a>
+                                <a class="btn btn-outline-dark" href="/complete?id={{ task.id }}" role="button">Complete</a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="8">
+                        <br>
+                        <p>No Tasks Currently. Well Done!</p>
+                    </td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+{% endblock %}

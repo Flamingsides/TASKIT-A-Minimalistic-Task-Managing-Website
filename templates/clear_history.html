@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Task
+{% endblock %}
+
+{% block main %}
+    <form action="/clearhistory" method="post">
+        <br><br>
+        <h2>Attention</h2>
+        <br>
+        <h6>All history would be permanently deleted</h6>
+        <p>Are you sure you would like to proceed?</p>
+        <br><br>
+        <div style="display: flex; justify-content: center;">
+            <a class="btn btn-outline-dark" href="/history" role="button">Cancel</a>
+            <p>&#160</p>
+            <button type="submit" class="btn btn-danger">Clear All History</button>
+        </div>
+    </form>
+{% endblock %}

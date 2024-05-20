@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    
+    <div class="options-header">
+        <div class="show-history-type">
+            <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off" checked disabled>
+            <label class="btn-sm btn-outline-secondary" for="btn-check-outlined">Show:</label>
+            <p>&#160</p>
+            <p>&#160</p>
+
+            <input type="checkbox" class="btn-check" id="added-btn-check-outlined" autocomplete="off" value="Added" checked>
+            <label class="btn-sm btn-outline-primary" for="added-btn-check-outlined">Added</label>
+            <p>&#160</p>
+
+            <input type="checkbox" class="btn-check" id="edited-btn-check-outlined" autocomplete="off" value="Edited" checked>
+            <label class="btn-sm btn-outline-primary" for="edited-btn-check-outlined">Edited</label>
+            <p>&#160</p>
+
+            <input type="checkbox" class="btn-check" id="completed-btn-check-outlined" autocomplete="off" value="Completed" checked>
+            <label class="btn-sm btn-outline-primary" for="completed-btn-check-outlined">Completed</label>
+            <p>&#160</p>
+
+            <input type="checkbox" class="btn-check" id="deleted-btn-check-outlined" autocomplete="off" value="Deleted" checked>
+            <label class="btn-sm btn-outline-primary" for="deleted-btn-check-outlined">Deleted</label>
+        </div>
+
+        <a href="/clearhistory" class="btn btn-sm btn-outline-danger" id="clear-history-btn" role="button">Clear History</a>
+    </div>
+
+    <table class="table table-responsive table-hover">
+        <thead>
+            <th>Time</th>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {% if logs %}
+                {% for log in logs %}
+                <tr class="{{ log.action }}">
+                    <td>{{ log.time }}</td>
+                    <td>{{ log.title }}</td>
+                    <td>{{ log.description }}</td>
+                    <td>{{ log.priority }}</td>
+                    <td>{{ log.action }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5">
+                        <br>
+                        <p>No task history</p>
+                    </td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+{% endblock %}

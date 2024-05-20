@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <br>
+    <br>
+    <h4>Error: {{ message }}</h4>
+    <br>
+    <a href="{{ return_url }}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Try Again</a>
+
+{% endblock %}
